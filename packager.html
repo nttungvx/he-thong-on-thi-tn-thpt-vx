@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đóng Gói Đề - ÔN THI TỐT NGHIỆP THPT</title>
+    <!-- Thư viện đọc Excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; padding: 30px; }
+        .card { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h2 { color: #2c3e50; text-align: center; }
+        .form-group { margin-bottom: 20px; }
+        label { font-weight: bold; display: block; margin-bottom: 8px; }
+        input[type="text"], input[type="file"] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        .btn { display: block; width: 100%; padding: 12px; background-color: #27ae60; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; transition: background 0.3s; }
+        .btn:hover { background-color: #2ecc71; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>HỆ THỐNG ĐÓNG GÓI ĐỀ THI</h2>
+        
+        <div class="form-group">
+            <label>1. Tiêu đề đề thi:</label>
+            <input type="text" id="examTitle" placeholder="VD: Đề Ôn Tập Toán Lớp 11">
+        </div>
+
+        <div class="form-group">
+            <label>2. Tải lên danh sách câu hỏi (File Excel):</label>
+            <input type="file" id="excelFile" accept=".xlsx, .xls">
+        </div>
+
+        <button class="btn" onclick="processAndPackage()">Trộn & Đóng Gói</button>
+    </div>
+
+    <script src="packager.js"></script>
+</body>
+</html>
